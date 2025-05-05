@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="/logo.png" alt="Logo" />
+    </div>
+
+    <form method="post" action="/login">
+        <div class="login">Login</div>
+
+        <div class="email-box">
+            <input type="text" name="username" class="email" placeholder="Email" required>
+        </div>
+
+        <div class="senha-box">
+            <input type="password" name="password" class="senha" placeholder="Senha" required>
+            <button type="button" class="visualizar">
+                <img src="https://img.icons8.com/ios/50/000000/invisible.png" alt="Visualizar" />
+            </button>
+        </div>
+
+        <div class="entra-box">
+            <button type="submit" class="entrar">Entrar</button>
+        </div>
+    </form>
+
+    <div class="cadastre-se">
+        <a href="/cadastro">Ainda não tem conta? Cadastre-se</a>
+    </div>
+</body>
+</html>
