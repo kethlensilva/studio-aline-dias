@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastre-se</title>
+  <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/cadastro.css">
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="/logo.png" alt="Logo da empresa" />
+  </div>
+
+  <form method="POST" action="/api/cadastrar">
+    <div class="login">Cadastre-se</div>
+
+    <!-- Nome -->
+    <div class="nome-box">
+        <input type="text" name="nome" class="nome" placeholder="Nome completo" required>
+    </div>
+
+    <!-- Email -->
+    <div class="email-box">
+        <input type="email" name="email" class="email" placeholder="Email" required>
+    </div>
+
+    <!-- Senha -->
+    <div class="senha-box">
+        <input type="password" name="senha" class="senha" placeholder="Senha" required>
+    </div>
+
+    <!-- Botão Cadastrar -->
+    <div class="entra-box">
+        <button type="submit" class="entrar">Criar conta</button>
+    </div>
+</form>
+
+  <!-- Link para login -->
+  <div class="ja-tem-conta">
+    <a href="/login">Já tem conta? Faça login</a>
+  </div>
+
+  <!-- Mensagem de erro/sucesso -->
+  <div th:if="${message}" class="message">
+    <p th:text="${message}"></p>
+  </div>
+
+</body>
+</html>
